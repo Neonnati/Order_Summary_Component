@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <title>Frontend Mentor | Order summary card</title>
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+  <body>
+    <main>
+      <div class="background">
+        <img class="img1" src="./images/pattern-background-desktop.svg" alt="pattern-background-desktop"/>
+        <img class="img2" src="./images/pattern-background-mobile.svg" alt="pattern-background-mobile"/>
+
+        <article class="summary-card">
+          <section>
+            <picture class="picture-container">
+              <img src="./images/illustration-hero.svg" alt="icon-music"/>
+            </picture>
+          </section>
+
+          <section class="content-padding">
+            <!-- all content -->
+            <h1>Order Summary</h1>
+            <p class="content"><span class="content-y">Y</span>ou can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+
+            <!-- all actions -->
+            <div class="annual-actions">
+
+              <!-- annual plan -->
+              <div class="annual-plan">
+                <div class="annual-plan-left">
+                  <img src="./images/icon-music.svg" alt="icon-music">
+                  <div class="annual-plan-price">
+                    <h2>Annual Plan</h2>
+                    <p class="price">$59.99/<span class="year">year</span></p>
+                  </div>
+                </div>
+                <button type="button" id="change">Change</button>
+              </div>
+
+              <!-- payment -->
+              <button type="button" id="payment">Proceed to Payment</button>
+
+              <!-- cancel -->
+              <button type="button" id="cancel">Cancel Order</button>
+            </div>
+          </section>
+        </article>
+        
+        <!-- <footer class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/Neonnati">Neonnati</a>.
+        </footer>     -->
+      </div><!--class="background"-->
+    </main>
+    
+    
+  </body>
+</html>

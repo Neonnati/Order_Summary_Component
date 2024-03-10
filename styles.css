@@ -1,0 +1,252 @@
+/* CSS RESET */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+button {
+  border: none;
+}
+
+:root {
+/* Colors */
+/* Primary */
+--Pale-blue: hsl(225, 100%, 94%);
+--Pale-blue-shadow: hsl(225, 100%, 75%);
+--Bright-blue: hsl(245, 75%, 52%);
+--Bright-blue-shadow: hsl(243, 39%, 74%);
+--Bright-blue-active: hsl(245, 75%, 72%);
+
+/* Neutral */
+--Very-pale-blue: hsl(225, 100%, 98%);
+--Desaturated-blue: hsl(224, 23%, 55%);
+--Dark-blue: hsl(223, 47%, 23%);
+
+/* Fonts */
+--ff: 'Red Hat Display', sans-serif;
+--fs: 16px;
+--fw-4: 400;
+--fw-5: 500;
+--fw-7: 700;
+--fw-9: 900;
+
+--Mobile-w: 375px;
+--Desktop-w: 1440px;
+}
+
+/* general styling */
+html {
+  font-size: var(--fs);
+  font-family: var(--ff);
+}
+body {
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background {
+  max-width: 1440px;
+  height: 900px;
+  background-color: var(--Pale-blue);
+}
+
+.img1 {
+  max-width: 100%;
+  height: auto;
+}
+
+.img2 {
+  display: none;
+}
+
+.summary-card {
+  max-width: 450px;
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 1.3em;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 30px 40px -50px var(--Bright-blue);
+}
+
+.content-padding {
+  padding-inline: 3em;
+  padding-block: 2.9em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+h1 {
+  font-size: 1.7em;
+  font-weight: var(--fw-9);
+  letter-spacing: 0.5px;
+  color: var(--Dark-blue);
+}
+
+.content {
+  font-size: 16.5px;
+  line-height: 26px;
+  color: var(--Desaturated-blue);
+  margin-bottom: 3px;
+}
+
+.content-y {
+  margin-right: 0.5px;
+}
+
+.annual-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.annual-plan {
+  background-color: var(--Very-pale-blue);
+  border-radius: 1em;
+  display: flex;
+  justify-content: space-between;
+  padding-block: 1.6em;
+  padding-inline: 1.5em;
+}
+
+.annual-plan-left {
+  display: flex;
+  gap: 1.2em;
+}
+
+.annual-plan-price {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  align-items: flex-start;
+}
+
+h2 {
+  font-size: 1.05em;
+  color: var(--Dark-blue);
+}
+
+.price {
+  font-size: 1.05em;
+  letter-spacing: 0.3px;
+  color: var(--Desaturated-blue);
+}
+
+.annual-plan > button {
+  font-size: 14px;
+  color: var(--Bright-blue);
+  text-decoration: underline;
+  font-weight: var(--fw-7);
+  background: transparent;
+
+}
+
+.annual-plan > button:hover, .annual-plan > button:active {
+  cursor: pointer;
+  color: var(--Bright-blue-active);
+  text-decoration: none;
+}
+
+#payment {
+  background-color: var(--Bright-blue);
+  border-radius: 0.7em;
+  font-size: 15.5px;
+  color: var(--Very-pale-blue);
+  font-weight: var(--fw-9);
+  padding: 1em;
+  box-shadow: 0 10px 30px  var(--Bright-blue-shadow);
+}
+
+#payment:hover, #paymanet:active {
+  cursor: pointer;
+  background-color: var(--Bright-blue-active);
+}
+
+#cancel {
+  background: transparent;
+  color: var(--Desaturated-blue);
+  font-size: 0.95em;
+  font-weight: var(--fw-7);
+  margin-bottom: 0.4em;
+}
+
+#cancel:hover, #cancel:active {
+  cursor: pointer;
+  color: black;
+}
+
+.annual-plan-left > img {
+  width: 3em;
+}
+
+/* mobile */
+
+@media (max-width: 375px) {
+  .summary-card {
+    width: 87%;
+  }
+  
+  .content-padding {
+    padding-block: 2em;
+    padding-inline: 1.5em;
+  }
+
+  h1 {
+    font-size: 1.33em;
+  }
+
+  .content {
+    font-size: 0.95em;
+    padding-inline: 0.7em;
+    margin-bottom: 0.5em;
+  }
+
+  .annual-actions {
+    gap: 1.5em;
+  }
+
+  .annual-plan {
+    padding-block: 1em;
+    padding-inline: 1em;
+  }
+
+  .annual-plan-price {
+    gap: none;
+  }
+
+  h2 {
+    font-size: 0.9em;
+  }
+
+  .price {
+    font-size: 0.85em;
+    font-weight: var(--fw-5);
+  }
+
+  .annual-plan > button {
+    font-size: 0.8em;
+  }
+
+  .img1 {
+    display: none;
+  }
+
+  .img2 {
+    display: block;
+  }
+}
